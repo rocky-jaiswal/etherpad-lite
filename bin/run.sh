@@ -23,6 +23,9 @@ fi
 #prepare the enviroment
 bin/installDeps.sh $* || exit 1
 
+#move the mongodb file to ueberdb
+cp mongodb_db.js.bak ./node_modules/ueberDB/mongodb_db.js
+
 #Move to the node folder and start
 echo "start..."
 cd "node"
